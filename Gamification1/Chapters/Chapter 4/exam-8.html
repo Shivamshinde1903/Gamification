@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>सराव परीक्षा-8</title>
+	<style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			line-height: 1.5;
+			margin: 0;
+			padding: 0;
+            width:100;
+		}
+
+		header {
+			background-color: #7fd122;
+			color: #000000;
+			padding: 20px;
+			text-align: center;
+		}
+
+		h1 {
+			margin: 0;
+		}
+
+		main {
+			margin: 20px;
+            width: 200px;
+		}
+
+		section {
+			margin-bottom: 18px;
+		}
+
+		h2 {
+			color: #333333;
+			font-size: 24px;
+			margin-bottom: 16px;
+            margin-top: 0px;
+		}
+
+		h3 {
+			color: white;
+			font-size: 24px;
+			margin-bottom: 16px;
+            margin-top: 0px;
+		}
+
+		ol {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		li {
+			margin-bottom: 10px;
+		}
+
+		li::before {
+			content: "\2022";
+			color: #333;
+			display: inline-block;
+			margin-right: 10px;
+			position: relative;
+			top: 2px;
+		}
+
+		footer {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+            margin-top: -26px;
+		}
+
+        .container {
+			width: 90%;
+			height: 555px;
+			margin: auto;
+			/* background-color: #cd2828; */
+			border: 1px solid #ddd;
+			box-sizing: border-box;
+			background-image: url("/Chapters/Chapter 2/images/cccc.png");
+            background-size: 100% 555px;
+            background-position: center;
+			
+		}
+
+        container-header {
+            background-color: #333;
+			color: #fff;
+			padding: 20px;
+            height: 88px;
+            width: 771.35px;
+        }
+
+		label{
+			color: #fff;
+		}
+
+        .my-button {
+    background-color: #666966;
+    border: none;
+    color: white;
+    width: 160px;
+    height: 40px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px -25px;
+    cursor: pointer;
+  }
+  .my-button:hover {
+  background-color: #3e8e41;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid #ddd;
+  width: 90%;
+  background-color: #f2f2f2;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  margin: 20px 0;
+  padding: 5px;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}
+
+	</style>
+</head>
+<body>
+    <div class="container" id="cont" style="position: absolute; top: 88px; left: 150px;">
+		<img src="/Chapters/Chapter 2/images/cccc.png" alt="Flowers in Chania"  width="100%" height="555" >
+        <!-- <table><thead><tr><th>स्थान</th><th>शतक</th><th>दशक</th><th>एकक</th><th>दशांश</th><th>शतांश</th><th>सहस्रांश</th></tr></thead><tbody><tr><td>    </td><td>100</td><td>10</td><td>1</td><td>1/10</td><td>1/100</td><td>1/1000</td></tr><tr><td>अंक</td><td>3</td><td>7</td><td>8</td><td>0</td><td>2</td><td>5</td></tr><tr><td>स्थानिक किंमत</td><td>300</td><td><input type="number" id="num7" placeholder=" " max="9" min="0" step="0"></td><td><input type="number" id="num8" placeholder=" " max="9" min="0" step="0"></td><td>0/10 = 0.1</td><td><input type="number" id="num9" placeholder=" " max="9" min="0" step="0"></td><td>5/1000 = 0.005</td></tr></tbody></table> -->
+          
+</div>
+	<header>
+
+		<h1>सराव परीक्षा-8</h1>
+	</header>
+    
+
+	<main>
+		<section>
+			<h2 style="align-content: center;"> &nbsp;&nbsp;&nbsp;&nbsp;भाग 1</h2>
+			
+				<button class="my-button" id="question1">प्रश्न 1</button><br>
+				<button class="my-button" id="question2">प्रश्न 2</button><br>
+				<button class="my-button" id="question3">प्रश्न 3</button><br>
+				<button class="my-button" id="question4">प्रश्न 4</button><br>
+				<button class="my-button" id="question5">प्रश्न 5</button><br>
+				<button class="my-button" id="question6" >प्रश्न 6</button><br>
+				<button class="my-button" id="question7" >प्रश्न 7</button><br>
+				<button class="my-button" id="question8" >प्रश्न 8</button><br>
+				<button class="my-button" id="question9" >प्रश्न 9</button><br>
+				<button class="my-button" id="question10" style="opacity: 0;">प्रश्न 10</button><br>
+				<button class="my-button" id="question11" >समाप्त करा</button><br>
+			
+		</section>
+
+		<!-- <section>
+			<h2>Section 2</h2>
+			<ol>
+				Question 1
+				Question 2
+				Question 3
+			</ol>
+		</section>
+ -->
+        </div>
+	</main>
+    
+
+	<footer>
+		<p>© 2023</p>
+	</footer>
+
+</body>
+</html>
+
+<script>
+	    sum = 0.02;
+        sum1= 0;
+        sum2 = 0;
+		marks = 0;
+
+		//var myArray = ["1", "", "", "", ""];
+		const myArray = ["", "", "", "","","","","","","","","",""];
+		const myArray1 = ["2880","260","3.528","10.9151","739.65","70.151","5136","24.063","1.14","216","6","76","5600","208","72000"]
+
+    // select the button by its id
+var button = document.getElementById("question1");
+
+// add an event listener to the button
+button.addEventListener("click", function() {
+  // perform an action when the button is clicked
+  var element = document.getElementById("cont");
+  
+  // change the HTML content of the element
+  element.innerHTML = "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20 मीटर कापडाची किंमत ` 3600 आहे, तर 16 मीटर कापडाची किंमत काढा.</label><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num7' style='position: absolute;text-align: center; font-size: 30px; left: 400px; top:400px'><br>"+"<p>"+myArray[0]+"</p>"+" <button class='button' id='tapasa4' style='position: absolute; top: 400; left: 550px;top:450px; width: 100px ; height: 35px; font-size:25px'>नोंद करा</button>"
+//   var num7Input = document.getElementById("num7");
+//   var num8Input = document.getElementById("num8");
+//   var num9Input = document.getElementById("num9");
+ var submit = document.getElementById("tapasa4");
+//   var num7 = parseInt(num7Input.value);
+//   var num8 = parseInt(num8Input.value);
+//   var num9 = parseInt(num9Input.value);
+submit.addEventListener("click", function() {
+  myArray[0]="3"
+  var num7Input = document.getElementById("num7");
+//   var num8Input = document.getElementById("num8");
+//   var num9Input = document.getElementById("num9");
+  
+  var num7 = parseFloat(num7Input.value);
+//   var num8 = parseFloat(num8Input.value);
+//   var num9 = parseFloat(num9Input.value);
+  if(num7Input.value!=""){
+  myArray[0]=num7.toString();
+//   myArray[1]=num8.toString();
+//   myArray[2]=num9.toString();
+	var element1 = document.getElementById("cont"); 
+	element1.innerHTML ="<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20 मीटर कापडाची किंमत ` 3600 आहे, तर 16 मीटर कापडाची किंमत काढा.</label><br><br><br><br><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num7' style='position: absolute;text-align: center; font-size: 30px;'><br><br><br><br>"+"<p>"+myArray[0]+"</p>"+"<br><br><br><p>बरोबर</p>"
+
+}})
+});
+
+
+var button1 = document.getElementById("question2");
+button1.addEventListener("click", function() {
+    var element2 = document.getElementById("cont");
+ 	element2.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 किग्रॅ तांदळाची किंमत ` 325 आहे, तर 8 किग्रॅ तांदळाची किंमत काढा.</label><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num1' style='position: absolute;text-align: center; font-size: 30px; left: 400px; top:400px'><br>"+"<p>"+myArray[3]+"</p>"+" <button class='button' id='tapasa1' style='position: absolute; top: 400; left: 550px;top:450px; width: 100px ; height: 35px; font-size:25px'>नोंद करा</button>"
+
+var submit1 = document.getElementById("tapasa1");
+submit1.addEventListener("click", function() {
+
+var num1Input = document.getElementById("num1");
+// var num2Input = document.getElementById("num2");
+// var num3Input = document.getElementById("num3");
+
+var num1 = parseFloat(num1Input.value);
+// var num2 = parseFloat(num2Input.value);
+// var num3 = parseFloat(num3Input.value);
+if(num1Input.value != ""){
+  myArray[3]=num1.toString();
+//   myArray[4]=num2.toString();
+//   myArray[5]=num3.toString();
+  var element2 = document.getElementById("cont"); 
+  element2.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 किग्रॅ तांदळाची किंमत ` 325 आहे, तर 8 किग्रॅ तांदळाची किंमत काढा.</label><br><br><br><br><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num1' style='position: absolute;text-align: center; font-size: 30px;'><br><br><br><br>"+"<p>"+myArray[3]+"</p>"+"<br><br><br><p>बरोबर</p>"
+
+}}) 
+
+});
+
+var button2 = document.getElementById("question3");
+button2.addEventListener("click", function() {
+    var element3 = document.getElementById("cont");
+ 	element3.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 किग्रॅ तांदळाची किंमत ` 325 आहे, तर 8 किग्रॅ तांदळाची किंमत काढा.</label><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num4' style='position: absolute;text-align: center; font-size: 30px; left: 400px; top:400px'><br>"+"<p>"+myArray[6]+"</p>"+" <button class='button' id='tapasa2' style='position: absolute; top: 400; left: 550px;top:450px; width: 100px ; height: 35px; font-size:25px'>नोंद करा</button>"
+
+var submit2 = document.getElementById("tapasa2");
+submit2.addEventListener("click", function() {
+
+var num4Input = document.getElementById("num4");
+// var num5Input = document.getElementById("num5");
+// var num6Input = document.getElementById("num6");
+// var num3Input = document.getElementById("num3");
+
+var num4 = parseFloat(num4Input.value);
+// var num5 = parseFloat(num5Input.value);
+// var num6 = parseFloat(num6Input.value);
+// var num3 = parseFloat(num3Input.value);
+if(num4Input.value != "" ){
+	myArray[6]=num4.toString();
+	// myArray[7]=num5.toString();
+	// myArray[8]=num6.toString();
+    // myArray[2]=num3.toString();
+  var element3 = document.getElementById("cont"); 
+  element3.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 किग्रॅ तांदळाची किंमत ` 325 आहे, तर 8 किग्रॅ तांदळाची किंमत काढा.</label><br><br><br><br><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num4' style='position: absolute;text-align: center; font-size: 30px;'><br><br><br><br>"+"<p>"+myArray[6]+"</p>"+"<br><br><br><p>बरोबर</p>"
+
+}}) 
+
+});
+
+
+var button3 = document.getElementById("question4");
+button3.addEventListener("click", function() {
+    var element4 = document.getElementById("cont");
+ 	element4.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 किग्रॅ तांदळाची किंमत ` 325 आहे, तर 8 किग्रॅ तांदळाची किंमत काढा.</label><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num10' style='position: absolute;text-align: center; font-size: 30px; left: 400px; top:400px'><br>"+"<p>"+myArray[9]+"</p>"+" <button class='button' id='tapasa3' style='position: absolute; top: 400; left: 550px;top:450px; width: 100px ; height: 35px; font-size:25px'>नोंद करा</button>"
+
+var submit3 = document.getElementById("tapasa3");
+submit3.addEventListener("click", function() {
+
+var num10Input = document.getElementById("num10");
+//var num14Input = document.getElementById("num14");
+
+
+var num10 = parseFloat(num10Input.value);
+//var num14 = parseFloat(num14Input.value);
+
+if(num10Input.value != ""){
+	myArray[9]=num10.toString();
+    //myArray[12]=num14.toString();
+  var element4 = document.getElementById("cont"); 
+  element4.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 किग्रॅ तांदळाची किंमत ` 325 आहे, तर 8 किग्रॅ तांदळाची किंमत काढा.</label><br><br><br><br><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num10' style='position: absolute;text-align: center; font-size: 30px;'><br><br><br><br>"+"<p>"+myArray[9]+"</p>"+"<br><br><br><p>बरोबर</p>"
+
+}}) 
+
+});
+
+
+var button4 = document.getElementById("question5");
+button4.addEventListener("click", function() {
+    var element5 = document.getElementById("cont");
+ 	element5.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; समान वेगाने एक कार 165 किमी अंतर 3 तासांत कापते. त्याच वेगाने (अ) 330 किमी अंतर <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;जाण्यास कारला किती तास लागतील ? (ब) 8 तासांत कार किती अंतर कापेल ?</label><br><br><br><br><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num11' style='position: absolute;text-align: center; font-size: 30px; left: 400px; top:200px'><br> "+"<p>"+myArray[10]+"</p>"+"<button class='button' id='tapasa5' style='position: absolute; top: 400; left: 550px; top:450px; width: 100px ; height: 35px ; font-size:25px'>नोंद करा</button>"
+
+var submit4 = document.getElementById("tapasa5");
+submit4.addEventListener("click", function() {
+
+var num11Input = document.getElementById("num11");
+
+
+var num11 = parseFloat(num11Input.value);
+
+if(num11Input.value != ""){
+	myArray[10]=num11.toString();
+  var element5 = document.getElementById("cont"); 
+  element5.innerHTML="<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; समान वेगाने एक कार 165 किमी अंतर 3 तासांत कापते. त्याच वेगाने (अ) 330 किमी अंतर  <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;जाण्यास कारला किती तास लागतील ? (ब) 8 तासांत कार किती अंतर कापेल ?</label><br><br><br><br><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num11' style='position: absolute;text-align: center; font-size: 30px; left: 400px; top:200px'><br> "+"<p>"+myArray[10]+"</p>"+"<br><br><br><p>बरोबर</p>"
+
+}}) 
+
+});
+
+// 6th example
+var button5 = document.getElementById("question6");
+button5.addEventListener("click", function() {
+    var element6 = document.getElementById("cont");
+ 	element6.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;तीन एकर शेतीची मशागत करण्याकरता ट्रॅक्टरला 12 लीटर डिझेल लागते, तर 19 एकर शेतीची मशागत &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;करण्यासाठी किती लीटर डिझेल लागेल ?</label><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num12' style='position: absolute;text-align: center; font-size: 30px;left: 400px; top:400px'><br> "+"<p>"+myArray[11]+"</p>"+" <button class='button' id='tapasa5' style='position: absolute; top: 400; left: 550px;top:450px; width: 100px ; height: 35px; font-size:25px'>नोंद करा</button>"
+
+var submit5 = document.getElementById("tapasa5");
+submit5.addEventListener("click", function() {
+
+var num12Input = document.getElementById("num12");
+
+
+var num12 = parseFloat(num12Input.value);
+
+if(num12Input.value != ""){
+	myArray[11]=num12.toString();
+  var element6 = document.getElementById("cont"); 
+  element6.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;तीन एकर शेतीची मशागत करण्याकरता ट्रॅक्टरला 12 लीटर डिझेल लागते, तर 19 एकर शेतीची मशागत &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;करण्यासाठी किती लीटर डिझेल लागेल ?</label><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num12' style='position: absolute;text-align: center; font-size: 30px;left: 400px; top:400px'><br> "+"<p>"+myArray[11]+"</p>"+"<br><p>बरोबर</p>"
+
+}}) 
+
+});
+
+
+var button6 = document.getElementById("question7");
+button6.addEventListener("click", function() {
+    var element7 = document.getElementById("cont");
+ 	element7.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;तीन एकर शेतीची मशागत करण्याकरता ट्रॅक्टरला 12 लीटर डिझेल लागते, तर 19 एकर शेतीची मशागत &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;करण्यासाठी किती लीटर डिझेल लागेल ?</label><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num13' style='position: absolute;text-align: center; font-size: 30px;left: 400px; top:400px'><br> "+"<p>"+myArray[12]+"</p>"+" <button class='button' id='tapasa6' style='position: absolute; top: 400; left: 550px;top:450px; width: 100px ; height: 35px; font-size:25px'>नोंद करा</button>"
+
+var submit6 = document.getElementById("tapasa6");
+submit6.addEventListener("click", function() {
+
+var num13Input = document.getElementById("num13");
+
+
+var num13 = parseFloat(num13Input.value);
+
+
+
+if(num13Input.value != ""){
+	myArray[12]=num13.toString();
+  var element7 = document.getElementById("cont"); 
+  element7.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;तीन एकर शेतीची मशागत करण्याकरता ट्रॅक्टरला 12 लीटर डिझेल लागते, तर 19 एकर शेतीची मशागत &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;करण्यासाठी किती लीटर डिझेल लागेल ?</label><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num13' style='position: absolute;text-align: center; font-size: 30px;left: 400px; top:400px'><br> "+"<p>"+myArray[12]+"</p>"+"<br><p>बरोबर</p>"
+
+}}) 
+
+});
+
+
+var button7 = document.getElementById("question8");
+button7.addEventListener("click", function() {
+    var element8 = document.getElementById("cont");
+ 	element8.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;एका आमराईत 8 रांगांत 128 झाडे आहेत. प्रत्येक रांगेतील झाडांच्या संख्या समान असल्यास अशा 13 रांगांत &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; किती झाडे असतील ?</label><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num14' style='position: absolute;text-align: center; font-size: 30px;left: 400px; top:400px'><br> "+"<p>"+myArray[13]+"</p>"+" <button class='button' id='tapasa7' style='position: absolute; top: 400; left: 550px;top:450px; width: 100px ; height: 35px; font-size:25px'>नोंद करा</button>"
+
+var submit7 = document.getElementById("tapasa7");
+submit7.addEventListener("click", function() {
+
+var num14Input = document.getElementById("num14");
+
+
+var num14 = parseFloat(num14Input.value);
+
+if(num14Input.value != ""){
+	myArray[13]=num14.toString();
+  var element8 = document.getElementById("cont"); 
+  element8.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;एका आमराईत 8 रांगांत 128 झाडे आहेत. प्रत्येक रांगेतील झाडांच्या संख्या समान असल्यास अशा 13 रांगांत &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13 रांगांत किती झाडे असतील ?</label><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num14' style='position: absolute;text-align: center; font-size: 30px;left: 400px; top:400px'><br> "+"<p>"+myArray[13]+"</p>"+"<br><p>बरोबर</p>"
+
+}}) 
+
+});
+
+var button8 = document.getElementById("question9");
+button8.addEventListener("click", function() {
+    var element9 = document.getElementById("cont");
+ 	element9.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;एका शेततळ्यामध्ये120000 लीटर पाणी साठते. ते शेततळे तयार करण्यासाठी 18000 रुपये खर येतो, तर &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 480000 लीटर पाणी साठवणारी अशी किती शेततळी तयार होतील व त्यांसाठी किती रुपये खर्च येईल ?</label><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num15' style='position: absolute;text-align: center; font-size: 30px;left: 400px; top:400px'><br> "+"<p>"+myArray[14]+"</p>"+" <button class='button' id='tapasa8' style='position: absolute; top: 400; left: 550px;top:450px; width: 100px ; height: 35px; font-size:25px'>नोंद करा</button>"
+
+var submit8 = document.getElementById("tapasa8");
+submit8.addEventListener("click", function() {
+
+var num15Input = document.getElementById("num15");
+
+
+var num15 = parseFloat(num15Input.value);
+
+if(num15Input.value != ""){
+	myArray[14]=num15.toString();
+  var element9 = document.getElementById("cont"); 
+  element9.innerHTML= "<br><br><br><label style ='position: absolute; text-align : left; font-size: 30px;'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;एका शेततळ्यामध्ये120000 लीटर पाणी साठते. ते शेततळे तयार करण्यासाठी 18000 रुपये खर येतो, तर &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 480000 लीटर पाणी साठवणारी अशी किती शेततळी तयार होतील व त्यांसाठी किती रुपये खर्च येईल ?</label><br><br><br><br><br><br><br><br><input type='number' step='0.01' id='num15' style='position: absolute;text-align: center; font-size: 30px;left: 400px; top:400px'><br> "+"<p>"+myArray[14]+"</p>"+"<br><p>बरोबर</p>"
+
+}}) 
+
+});
+
+
+var submit_button = document.getElementById("question11");
+submit_button.addEventListener("click", function(){
+	for(let i=0;i<=12;i++){
+		if(myArray[i]==myArray1[i]){
+			marks = marks+1;
+			
+		}
+	}
+	alert("Score = "+
+	
+	marks);
+	location.reload();
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>

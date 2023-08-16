@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Addition Game</title>
+	<style>
+		body {
+			font-family: sans-serif;
+			background-color: rgb(137, 192, 27);
+		}
+		#container {
+			margin: 0 auto;
+			width: 500px;
+			text-align: center;
+			background-color: white;
+		}
+		#grid-container {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			grid-gap: 0.5rem;
+			margin-bottom: 1rem;
+		}
+		.grid-item {
+			font-size: 1.5rem;
+			padding: 0.5rem;
+			background-color: #ccc;
+			color: #333;
+			border-radius: 5px;
+			text-align: center;
+			cursor: grab;
+		}
+		input[type="number"] {
+			font-size: 1.5rem;
+			padding: 0.5rem;
+			margin: 1rem;
+			border: 2px solid #ccc;
+			border-radius: 5px;
+			text-align: center;
+			cursor: pointer;
+		}
+		button {
+			font-size: 1.2rem;
+			padding: 0.5rem;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		button:hover {
+			background-color: #008CBA;
+		}
+
+		#newImageContainer {
+			margin: 0 auto;
+			width: 500px;
+			text-align: center;
+		}
+        
+        
+        #gameover{
+    width: 500px;
+    height: 200px;
+    background: linear-gradient(#F3CA6B, red);
+    color: white;
+    text-align: center;
+    font-size: 250%;
+    text-transform: uppercase;
+    position: absolute;
+    top: 170px;
+    left: 145px;
+    z-index: 2;
+    display: none;
+}
+  
+		
+		
+	</style>
+</head>
+<body>
+	<br><br><br><br><br><br><br><br>
+	<div id="container">
+		
+		<h1>Addition Game</h1>
+		<!-- <p>Drag the numbers below to create the numbers you want to add:</p> -->
+		<!-- <div id="grid-container">
+			<div class="grid-item" draggable="true">0</div>
+			<div class="grid-item" draggable="true">1</div>
+			<div class="grid-item" draggable="true">2</div>
+			<div class="grid-item" draggable="true">3</div>
+			<div class="grid-item" draggable="true">4</div>
+			<div class="grid-item" draggable="true">5</div>
+			<div class="grid-item" draggable="true">6</div>
+			<div class="grid-item" draggable="true">7</div>
+			<div class="grid-item" draggable="true">8</div>
+			<div class="grid-item" draggable="true">9</div>
+		</div> -->
+		<label for="num">First Number:</label><br>
+		<!-- <input type="number" id="num1" placeholder="1" max="9" min="0" step="0"> -->
+		<!-- <input type="number" id="num1" placeholder="Enter a number" max="9" min="0" step="0"> -->
+        <img src="/Demo Games/Demo Game 2/images/grapes.png" id="num1" alt="Flowers in Chania" width="60" height="45" style="position: absolute; top: 260; left: 550px;">
+        <img src="/Demo Games/Demo Game 2/images/bomb.png" id="num2" alt="Flowers in Chania" width="60" height="45" style="position: absolute; top: 260; left: 700px;">
+        <img src="/Demo Games/Demo Game 2/images/download1.jpg" alt="Flowers in Chania" width="60" height="45" style="position: absolute; top: 260; left: 806px;">
+        <img src="/Demo Games/Demo Game 2/images/apple.png" id="num3" alt="Flowers in Chania" width="60" height="45" style="position: absolute; top: 260; left: 900px;"><br><br><br>
+		<label for="num2">Second Number:</label><br>
+        <img src="/Demo Games/Demo Game 2/images/banana.png" id="num4" alt="Flowers in Chania" width="60" height="45" style="position: absolute; top: 400; left: 550px;">
+		<!-- <img src="cherries.png" id="num4" alt="Flowers in Chania" width="60" height="45"> -->
+		<!-- <img src="bomb.png" id="num5" alt="Flowers in Chania" width="60" height="45" style="position: absolute; top: 400; left: 700px;"> -->
+        <img src="/Demo Games/Demo Game 2/images/kiwi.png" id="num5" alt="Flowers in Chania" width="60" height="45" style="position: absolute; top: 400; left: 700px;">
+        <img src="/Demo Games/Demo Game 2/images/download1.jpg" alt="Flowers in Chania" width="60" height="45" style="position: absolute; top: 400; left: 806px;">
+        <img src="/Demo Games/Demo Game 2/images/cherries.png" id="num6" alt="Flowers in Chania" width="60" height="45" style="position: absolute; top: 400; left: 900px;"><br><br><br>
+        <label for="num2">Output:</label><br>
+		<input type="number" id="num7" placeholder="Enter a number" max="9" min="0" step="0">
+        <input type="number" id="num8" placeholder="Enter a number" max="9" min="0" step="0">
+        <img src="/Demo Games/Demo Game 2/images/download1.jpg" alt="Flowers in Chania" width="60" height="45">
+        <input type="number" id="num9" placeholder="Enter a number" max="9" min="0" step="0"><br>
+		<button id="submit-btn">Submit</button>
+		<p id="result"></p><br>
+		
+		
+		<img  src="/Demo Games/Demo Game 2/images/top-view-road.png" alt="Flowers in Chania" width="476" height="725" style="position: absolute; top: 0px; left:33px;">
+		<img  src="/Demo Games/Demo Game 2/images/top-view-road.png" alt="Flowers in Chania" width="476" height="725" style="position: absolute; top: 0px; left:1010px;">
+		<img  src="/Demo Games/Demo Game 2/images/images.jpg" alt="Flowers in Chania" width="140" height="52" style="position: absolute; top: 0px; left:200px;">
+		<img  src="/Demo Games/Demo Game 2/images/images.jpg" alt="Flowers in Chania" width="140" height="52" style="position: absolute; top: 0px; left:1178px;">
+		<img id="myImage" src="/Demo Games/Demo Game 2/images/xyz-removebg-preview.png" alt="Flowers in Chania" width="120" height="120" style="position: absolute; top: 589px; left: 214px;">
+		<img id="my.Image" src="/Demo Games/Demo Game 2/images/xyz2-2.png" alt="Flowers in Chania" width="150" height="150.66" style="position: absolute; top: 575px; left: 1175px;">
+		
+		<!-- <img  src="images.jpg" alt="Flowers in Chania" width="476" height="725" style="position: absolute; top: 0px; left:33px;"> -->
+        <!-- <audio id="myAudio" src="car-pass.mp3" autoplay></audio> -->
+		<div id="newImageContainer"></div>
+		<!-- /* <img src="download1.jpg" alt="Flowers in Chania" width="60" height="45" style="position: absolute; top: 475px; left: 50px;">
+		<img src="download1.jpg" alt="Flowers in Chania" width="60" height="45" style="position: absolute; top: 325px; left: 50px;">
+		<img src="download1.jpg" alt="Flowers in Chania" width="60" height="45" style="position: absolute; top: 175px; left: 50px;">
+		<img src="download1.jpg" alt="Flowers in Chania" width="60" height="45" style="position: absolute; top: 25px; left: 50px;"> */ -->
+        <button onclick="redirectToAnotherPage()">Next Example</button>
+        
+        
+
+	</div>
+    <div id="gameover">
+                
+    </div>
+
+    <script>
+	
+        count = 0;
+        sum = 0;
+        sum1= 0;
+        sum2 = 0;
+	
+	setTimeout(function() {
+    var image = document.getElementById("myImage");
+    image.parentNode.removeChild(image);
+	var newImage = document.createElement('img');
+				newImage.setAttribute('src', '/Demo Games/Demo Game 2/images/xyz-removebg-preview.png');
+				newImage.setAttribute('id', 'myNewImage');
+				newImage.setAttribute('width', '110');
+				newImage.setAttribute('heigth', '80');
+				newImage.setAttribute('style', 'position: absolute; top:535px; left: 214px');
+				document.getElementById('container').appendChild(newImage);
+  }, 5000); // remove image after 10 seconds (10000 milliseconds)
+
+  setTimeout(function() {
+    var image = document.getElementById("myNewImage");
+    image.parentNode.removeChild(image);
+	var newImage = document.createElement('img');
+				newImage.setAttribute('src', '/Demo Games/Demo Game 2/images/xyz-removebg-preview.png');
+				newImage.setAttribute('id', 'myNewImage1');
+				newImage.setAttribute('width', '110');
+				newImage.setAttribute('heigth', '80');
+				newImage.setAttribute('style', 'position: absolute; top:481px; left: 214px');
+				document.getElementById('container').appendChild(newImage);
+  }, 10000); // remove image after 10 seconds (10000 milliseconds)
+
+  setTimeout(function() {
+    var image = document.getElementById("myNewImage1");
+    image.parentNode.removeChild(image);
+	var newImage = document.createElement('img');
+				newImage.setAttribute('src', '/Demo Games/Demo Game 2/images/xyz-removebg-preview.png'); 
+				newImage.setAttribute('id', 'myNewImage2');
+				newImage.setAttribute('width', '110');
+				newImage.setAttribute('heigth', '80');
+				newImage.setAttribute('style', 'position: absolute; top:427px; left: 214px');
+				document.getElementById('container').appendChild(newImage);
+  }, 15000); // remove image after 10 seconds (10000 milliseconds)
+
+  setTimeout(function() {
+    var image = document.getElementById("myNewImage2");
+    image.parentNode.removeChild(image);
+	var newImage = document.createElement('img');
+				newImage.setAttribute('src', '/Demo Games/Demo Game 2/images/xyz-removebg-preview.png'); 
+				newImage.setAttribute('id', 'myNewImage3');
+				newImage.setAttribute('width', '110');
+				newImage.setAttribute('heigth', '80');
+				newImage.setAttribute('style', 'position: absolute; top:373px; left: 214px');
+				document.getElementById('container').appendChild(newImage);
+  }, 20000); // remove image after 10 seconds (10000 milliseconds)
+
+  setTimeout(function() {
+    var image = document.getElementById("myNewImage3");
+    image.parentNode.removeChild(image);
+	var newImage = document.createElement('img');
+				newImage.setAttribute('src', '/Demo Games/Demo Game 2/images/xyz-removebg-preview.png'); 
+				newImage.setAttribute('id', 'myNewImage4');
+				newImage.setAttribute('width', '110');
+				newImage.setAttribute('heigth', '80');
+				newImage.setAttribute('style', 'position: absolute; top:319px; left: 214px');
+				document.getElementById('container').appendChild(newImage);
+  }, 25000); // remove image after 10 seconds (10000 milliseconds)
+
+  setTimeout(function() {
+    var image = document.getElementById("myNewImage4");
+    image.parentNode.removeChild(image);
+	var newImage = document.createElement('img');
+				newImage.setAttribute('src', '/Demo Games/Demo Game 2/images/xyz-removebg-preview.png'); 
+				newImage.setAttribute('id', 'myNewImage5');
+				newImage.setAttribute('width', '110');
+				newImage.setAttribute('heigth', '80');
+				newImage.setAttribute('style', 'position: absolute; top:265px; left: 214px');
+				document.getElementById('container').appendChild(newImage);
+  }, 30000); // remove image after 10 seconds (10000 milliseconds)
+
+  setTimeout(function() {
+    var image = document.getElementById("myNewImage5");
+    image.parentNode.removeChild(image);
+	var newImage = document.createElement('img');
+				newImage.setAttribute('src', '/Demo Games/Demo Game 2/images/xyz-removebg-preview.png'); 
+				newImage.setAttribute('id', 'myNewImage6');
+				newImage.setAttribute('width', '110');
+				newImage.setAttribute('heigth', '80');
+				newImage.setAttribute('style', 'position: absolute; top:211px; left: 214px');
+				document.getElementById('container').appendChild(newImage);
+  }, 35000); // remove image after 10 seconds (10000 milliseconds)
+
+  setTimeout(function() {
+    var image = document.getElementById("myNewImage6");
+    image.parentNode.removeChild(image);
+	var newImage = document.createElement('img');
+				newImage.setAttribute('src', '/Demo Games/Demo Game 2/images/xyz-removebg-preview.png'); 
+				newImage.setAttribute('id', 'myNewImage7');
+				newImage.setAttribute('width', '110');
+				newImage.setAttribute('heigth', '80');
+				newImage.setAttribute('style', 'position: absolute; top:157px; left: 214px');
+				document.getElementById('container').appendChild(newImage);
+  }, 40000); // remove image after 10 seconds (10000 milliseconds)
+
+  setTimeout(function() {
+    var image = document.getElementById("myNewImage7");
+    image.parentNode.removeChild(image);
+	var newImage = document.createElement('img');
+				newImage.setAttribute('src', '/Demo Games/Demo Game 2/images/xyz-removebg-preview.png'); 
+				newImage.setAttribute('id', 'myNewImage8');
+				newImage.setAttribute('width', '110');
+				newImage.setAttribute('heigth', '80');
+				newImage.setAttribute('style', 'position: absolute; top:103px; left: 214px');
+				document.getElementById('container').appendChild(newImage);
+  }, 45000); // remove image after 10 seconds (10000 milliseconds)
+
+  setTimeout(function() {
+    var image = document.getElementById("myNewImage8");
+    image.parentNode.removeChild(image);
+	var newImage = document.createElement('img');
+				newImage.setAttribute('src', '/Demo Games/Demo Game 2/images/xyz-removebg-preview.png'); 
+				newImage.setAttribute('id', 'myNewImage9');
+				newImage.setAttribute('width', '110');
+				newImage.setAttribute('heigth', '80');
+				newImage.setAttribute('style', 'position: absolute; top:49px; left: 214px');
+				document.getElementById('container').appendChild(newImage);
+  }, 50000); // remove image after 10 seconds (10000 milliseconds)
+  
+		
+ 
+const gridItems = document.querySelectorAll(".grid-item"); 
+const num1Input = document.getElementById("num1");
+const num2Input = document.getElementById("num2");
+const num3Input = document.getElementById("num3");
+const num4Input = document.getElementById("num4");
+const num5Input = document.getElementById("num5");
+const num6Input = document.getElementById("num6");
+const num7Input = document.getElementById("num7");
+const num8Input = document.getElementById("num8");
+const num9Input = document.getElementById("num9");
+
+gridItems.forEach((item) => {
+  item.addEventListener("dragstart", function(event) {
+    event.dataTransfer.setData("text/plain", event.target.innerText);
+  });
+});
+
+num1Input.addEventListener("dragover", function(event) {
+  event.preventDefault();
+});
+
+num1Input.addEventListener("drop", function(event) {
+  event.preventDefault();
+  const data = event.dataTransfer.getData("text/plain");
+  num1Input.value = data;
+});
+
+num2Input.addEventListener("dragover", function(event) {
+  event.preventDefault();
+});
+
+num2Input.addEventListener("drop", function(event) {
+  event.preventDefault();
+  const data = event.dataTransfer.getData("text/plain");
+  num2Input.value = data;
+});
+
+const submitBtn = document.getElementById("submit-btn");
+const result = document.getElementById("result");
+
+submitBtn.addEventListener("click", function() {
+ const num1 = parseInt(num1Input.value);
+  const num2 = parseInt(num2Input.value);
+  const num3 = parseInt(num3Input.value);
+  const num4 = parseInt(num4Input.value);
+  const num5 = parseInt(num5Input.value);
+  const num6 = parseInt(num6Input.value);
+  const num7 = parseInt(num7Input.value);
+  const num8 = parseInt(num8Input.value);
+  const num9 = parseInt(num9Input.value);
+//   if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4) || isNaN(num5) || isNaN(num6)) {
+//     result.innerText = "Please enter valid numbers";
+//   } else {
+    
+	//num1 = 1;
+	// num2 = 2;
+	// num3 = 3;
+	//num4 = 4;
+	// num5 = 5;
+	// num6 = 6;
+    sum2 = 1 + 4;
+    //result.innerText = `The sum is ${sum2}`;
+    if(sum2 > 9){
+        const sum2 = num3 + num6 - 10;
+        const sum1 = sum1 + 1;
+        result.innerText = `The sum is ${sum2}`;
+    }
+    sum1 = 3 + 6;
+    //result.innerText = `The sum is ${num8}`;
+    if(sum1 > 9){
+        const sum1 = num2 + num5 - 10;
+        const sum = sum + 1;
+    }
+    sum = 5 + 2 ;
+    // if(sum > 9){
+    //     const sum2 = num3 + num6 - 10;
+    //     const sum1 = sum1 + 1;
+    // }
+    if(sum == num7 && sum1 == num8 && sum2 == num9 ){
+        count = count + 1;
+		result.innerText = `You are correct`;
+		
+		if(count==1){
+		setTimeout(function() {
+        var image1 = document.getElementById("my.Image");
+        image1.parentNode.removeChild(image1); 
+	    var newImage1 = document.createElement('img');
+				newImage1.setAttribute('src', '/Demo Games/Demo Game 2/images/xyz2-2.png'); 
+				newImage1.setAttribute('id', 'my.NewImage');
+				newImage1.setAttribute('width', '150');
+				newImage1.setAttribute('heigth', '150');
+				newImage1.setAttribute('style', 'position: absolute; top:30px; left: 1175px');
+				document.getElementById('container').appendChild(newImage1)
+                
+				var audio = new Audio('/Demo Games/Demo Game 2/audios/carspeed.mp3');
+                audio.play();   
+				
+	
+        }, 500);
+		
+
+			
+			}// remove image after 10 seconds (10000 milliseconds) 
+            
+            
+        // count = count + 1;
+	 
+
+    }
+    else{
+        result.innerText = `Please try again `;
+
+    }
+}
+    //result.innerText = `The sum is ${sum}${sum1}${sum2}`;
+
+    
+//  }
+);
+
+function redirectToAnotherPage() {
+  window.location.href = "new xyz2.html";
+}
+
+    </script>

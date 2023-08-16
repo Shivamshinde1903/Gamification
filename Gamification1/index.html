@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <title>Door Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        .ltdoor {
+            width: 50%;
+            background-image: url('2.jpg');
+            background-size: cover;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            animation: ltdoor 8s infinite;
+        }
+
+        .rdoor {
+            width: 50%;
+            background-image: url('1.jpg');
+            background-size: cover;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            animation: rdoor 8s infinite;
+            ;
+        }
+
+        @keyframes ltdoor {
+            from {
+                left: 0;
+            }
+
+            to {
+                left: -50%;
+            }
+
+        }
+
+        @keyframes rdoor {
+            from {
+                right: 0;
+            }
+
+            to {
+                right: -50%;
+            }
+
+        }
+
+        .container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-repeat: no-repeat;
+
+        }
+        .bottom {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-repeat: no-repeat;
+
+        }
+
+        .container p {
+            position: absolute;
+            width: auto;
+            height: auto;
+
+        }
+		nav {
+            background-color: rgba(0, 0, 0, 0.5);
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+
+		nav a {
+			float: left;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 18px;
+		}
+
+		nav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+        #video-background {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        }
+        .start{
+            padding-left: 500px;
+            padding-right: 100px;
+            padding-top: 400px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id="topview">
+    <div class="container" >
+        <video autoplay muted loop id="video-background">
+            <source src="hero.mp4" type="video/mp4">
+          </video>
+          
+        <div class="ltdoor"></div>
+        <div class="rdoor"></div>
+        <a href="Loginpage.html">
+            <img class="start" src="logotext-removebg-preview.png" alt="dog">
+        </a>
+    </div>
+    </section>  
+</body>
+
+</html>
