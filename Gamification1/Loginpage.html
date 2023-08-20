@@ -89,8 +89,19 @@
     </div>
 
     <script>
+        function store() {
+            var name = document.getElementById("name");
+            var roll = document.getElementById("roll");
+            var phone = document.getElementById("phone");
+
+            localStorage.setItem("name", name.value);
+            localStorage.setItem("roll", roll.value);
+            localStorage.setItem("phone", phone.value);
+        }
+
         // JavaScript code to handle form submission and redirection
         document.getElementById("xyz").addEventListener("submit", function(event) {
+            store();
             // Prevent the default form submission behavior
             event.preventDefault();
 
